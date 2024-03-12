@@ -19,10 +19,12 @@ def changeK():
 
 
 def init(path):
+    global trainFile
     trainFile = open(path, "r")
-    for line in trainFile:
-        localData = line.split(",")
-        dataSize = len(localData)
+
+    tmp = trainFile.readline()
+    global dataSize
+    dataSize = len(tmp)
 
 
 if __name__ == "__main__":
