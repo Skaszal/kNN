@@ -1,4 +1,5 @@
-#kNN
+kNN
+
 Napisz implementację algorytmu K najbliższych sąsiadów (kNN).
 Do obliczenia odległości między obserwacjami należy wykorzystać kwadrat odległości euklidesowej.
 
