@@ -15,7 +15,7 @@ def b():
 def changeK():
     print("podaj nowa wartosc k")
     global k
-    k = input("> ")
+    k = int(input("> "))
 
 
 def init(path):
@@ -33,8 +33,8 @@ if __name__ == "__main__":
 
     while True:
         print(" Wybierz chuje muje")
-        inp = input("> ")
-        inp = inp.lower()
+        inp = input("> ").lower()
+     
         if inp == "a":
             a()
         if inp == "b":
@@ -43,3 +43,4 @@ if __name__ == "__main__":
             changeK()
         if inp == "d":
             break
+
