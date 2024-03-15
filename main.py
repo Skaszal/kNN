@@ -1,15 +1,16 @@
-testFile = open("data/test.txt", "r")
-dataSize = 0
-k = 3
+from KNNSample import KNNSample
+from KNNTrainingData import KNNTrainingData
 
+k = 3
+data = 0
 
 
 def a():
-    print()
+    pass
 
 
 def b():
-    print()
+    pass
 
 
 def changeK():
@@ -19,12 +20,12 @@ def changeK():
 
 
 def init(path):
-    global trainFile
-    trainFile = open(path, "r")
+    datalist = []
+    for x in open(path, 'r'):
+        datalist.append(KNNSample(x))
+    global data
 
-    tmp = trainFile.readline()
-    global dataSize
-    dataSize = len(tmp)
+    data = KNNTrainingData(datalist, k)
 
 
 if __name__ == "__main__":
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     while True:
         print(" Wybierz chuje muje")
         inp = input("> ").lower()
-     
+
         if inp == "a":
             a()
         if inp == "b":
@@ -43,4 +44,3 @@ if __name__ == "__main__":
             changeK()
         if inp == "d":
             break
-
